@@ -2,9 +2,18 @@ import pandas as pd
 import numpy as np
 from autogluon.tabular import TabularPredictor
 
+classification = TabularPredictor.load("../models/classification")
+impersonation_detection = TabularPredictor.load("../models/impersonation_detection")
+authenticator = TabularPredictor.load("../models/authenticator")
+
+classification.persist()
+impersonation_detection.persist()
+authenticator.persist()
+
 np.random.seed(29)
 
 def main():
+
 
     genuine_testing_df = pd.read_csv('genuine_testing.csv')
     impersonator_testing_df = pd.read_csv('impersonator_testing.csv')
@@ -21,9 +30,7 @@ def test_authenticator_models(testing_df: pd.DataFrame, node_id: str, test_type:
     assert test_type in ['impersonator', 'genuine']
     assert node_id in ['odroid4', 'rpi-8c', 'rpi-8a', 'rpi-8b', 'odroid3', 'odroid2', 'rpi-8d', 'rpi-4a', 'odroid1']
 
-    classification = TabularPredictor.load("../models/classification")
-    impersonation_detection = TabularPredictor.load("../models/impersonation_detection")
-    authenticator = TabularPredictor.load("../models/authenticator")
+
     trace_num = 6
     auth_results = []
 

@@ -1,0 +1,29 @@
+# Authentication Framework
+
+## Testing on Raspberry Pi 4B (8GB) - (Labeled as 8A in the lab)
+- Debian 12 Bookworm updated til 14/04/2025
+- Python version 3.11.11
+- Autogluon version 1.2
+
+
+## Testing on Odroid M1 (8GB) - (Labeled #1 in the lab)
+- Debian 12 Bookworm updated til 14/04/2025
+- Python version 3.11.11
+- Autogluon version 1.2
+
+
+# GPU Trace collection
+## Raspberry Pis
+- OS: Debian 12 Bookworm
+- kernel Version: 6.6.47
+- Chromium Version: 126.0.6478.164 (Released on June 30 2024)
+- GPU: VideoCore 6
+- Mesa Version: 23.2.1
+
+
+## Odroid-M1
+- OS: Debian 12 Bookworm
+- Firefox Version: 115.15.0esr (September 3, 2024)
+- Kernel Version: 6.1.0-odroid-arm64
+- GPU: Mali-G52 r1
+- Mesa Version: 23.2.0.0

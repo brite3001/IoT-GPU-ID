@@ -1,4 +1,6 @@
 # IoT-GPU-ID
+Link to thesis: https://doi.org/10.26181/31236289, this section is in chapter 6
+
 PUFs (Physical unclonable function) represent a unique approach to enhancing security measures in devices such as microprocessors by using naturally occurring unique physical variations during manufacturing processes. These functions operate by generating a distinct "digital fingerprint" output, serving as an unreplicable identifier for each device when presented with specific input conditions. However, if a device hasn’t been fitted with a PUF during semiconductor manufacturing, then these IoT devices are unable to take advantage of these security features. In this chapter, we propose a hardware level authentication framework for IoT devices, which is able to distinguish between devices of the exact same make and model. This is possible by using a fingerprinting methodology from the browser that is capable of uniquely identifying on device GPUs. As devices are sharing digital fingerprints of their GPU to confirm their identity, a patient adversary could harvest enough of these GPU fingerprints to start an impersonation attack. To further enhance the security and privacy of the authentication model, we propose two approaches: 
 
 1. Training with additional synthetic data that simulates an impersonation attack, further hardening the model and 
